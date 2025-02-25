@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Design</title>
+  <script src="https://kit.fontawesome.com/4beb44ea41.js" crossorigin="anonymous"></script>
+  <style>
+    /* General Styles */
+    body {
+      background-image: url(cat.jpg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .box {
+      backdrop-filter: blur(40px);
+      background-color: rgba(0, 0, 0, 0.21);
+      text-align: center;
+      border-radius: 20px;
+      font-size: xx-large;
+      font-weight: 900;
+      transition: 600ms;
+      position: absolute;
+      top: 50px;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 20px;
+      width: 80%;
+      max-width: 400px;
+    }
+
+    li {
+      list-style-position: outside;
+      list-style-type: square;
+      font-size: large;
+      margin: 10px 0;
+    }
+
+    #insta {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: fixed;
+      top: 50%;
+      right: 20px;
+      transform: translateY(-50%);
+      gap: 30px;
+    }
+
+    #insta i {
+      font-size: 2rem;
+    }
+
+    /* Responsive Design */
+    @media screen and (max-width: 768px) {
+      .box {
+        font-size: large;
+        padding: 15px;
+        width: 90%;
+      }
+
+      li {
+        font-size: medium;
+      }
+
+      #insta {
+        right: 10px;
+        gap: 20px;
+      }
+
+      #insta i {
+        font-size: 1.5rem;
+      }
+    }
+
+    @media screen and (max-width: 480px) {
+      .box {
+        font-size: medium;
+        padding: 10px;
+        width: 95%;
+      }
+
+      li {
+        font-size: small;
+      }
+
+      #insta {
+        right: 5px;
+        gap: 15px;
+      }
+
+      #insta i {
+        font-size: 1.2rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div id="insta">
+    <i class="fa-brands fa-instagram fa-fade"></i>
+    <i class="fa-solid fa-user fa-fade"></i>
+    <i class="fa-solid fa-envelope fa-fade"></i>
+  </div>
+
+  <div class="box">
+    <a href="#" class="a1" style="text-decoration: none; color: purple;"> US &nbsp;<i
+        class="fa-solid fa-heart fa-bounce" style="color: #000000;"></i></a>
+    <nav class="menu">
+      <ul class="menu-options">
+        <li><a href="#home" style="text-decoration: none; color: white;">Home</a></li>
+        <li><a href="#Images" style="text-decoration: none; color: white;">Images</a></li>
+        <li><a href="#Video" style="text-decoration: none; color: white;">Video</a></li>
+        <li><a href="#check" style="text-decoration: none; color: white;">Check</a></li>
+      </ul>
+    </nav>
+  </div>
+</body>
+
+</html>
